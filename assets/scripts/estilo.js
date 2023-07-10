@@ -13,7 +13,9 @@ gstatic.crossOrigin = '';
 
 
 
-style.setAttribute('rel','stylesheet');
-style.setAttribute('href','./assets/styles/style.css');
+//style.setAttribute('rel','stylesheet');
+//style.setAttribute('href','./assets/styles/style.css');
 
-document.head.appendChild(style);
+document.head.append(style, googleapis, gstatic);
+//document.head.append(googleapis);
+//document.head.append(gstatic);

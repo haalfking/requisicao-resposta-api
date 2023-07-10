@@ -5,6 +5,7 @@ a {
     background-color: #3140c981;
     padding: 10px 15px;
     margin: 15px
+    
 }
 
 h1 {
@@ -38,3 +39,7 @@ li {
 }
 
 ul li {}
+
+.delete-button {
+    color: red;
+}

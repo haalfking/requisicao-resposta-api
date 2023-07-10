@@ -27,13 +27,13 @@
     },
     {
       "id": 6,
-      "descricao": "calça de couro vermelha",
-      "preco": "333.30"
+      "descricao": "calça de couro",
+      "preco": "89.90"
     },
     {
       "id": 7,
-      "descricao": "cinto ",
-      "preco": "59.90"
+      "descricao": "cinto",
+      "preco": "69.90"
     }
   ],
   "usuarios": [
