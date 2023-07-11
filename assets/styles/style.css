@@ -1,17 +1,31 @@
+
+form {
+   display: flex;
+   justify-content:space-between;
+   flex-direction: column;
+   align-items: center;
+   font-family: Arial;
+   
+  
+   
+}
+
 a {
     border-color: #0d21da;
     border-radius: 20px;
     box-shadow: 10px 10px 8px #1f21b37c;
     background-color: #3140c981;
     padding: 10px 15px;
-    margin: 15px
+    margin: 15px;
+    text-decoration: none;
+    color: black;
     
 }
 
 h1 {
-    border-color: #0d21da;
+    border-color: #608ab1;
     border-radius: 20px;
-    box-shadow: 10px 10px 8px #1f21b37c;
+    box-shadow: 10px 10px 8px #32338a7c;
     background-color: #3140c981;
     padding: 10px 15px;
     margin: 15px
@@ -20,7 +34,7 @@ h1 {
 ul {
     display: flex;
     justify-content: space-around;
-
+    list-style: none;
   
     border-spacing: 0;
     border-collapse: collapse;
@@ -34,6 +48,7 @@ li {
 
     text-transform: uppercase;
     font-size: 10pt;
+    font-family: Arial;
     
    
 }

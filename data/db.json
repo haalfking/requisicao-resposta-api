@@ -24,16 +24,6 @@
       "id": 5,
       "descricao": "Alpargatas Staten Island",
       "preco": 99.9
-    },
-    {
-      "id": 6,
-      "descricao": "calça de couro",
-      "preco": "89.90"
-    },
-    {
-      "id": 7,
-      "descricao": "cinto",
-      "preco": "69.90"
     }
   ],
   "usuarios": [
