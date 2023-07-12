@@ -1,13 +1,36 @@
-
-form {
+body{
+    background:  #FEFFE4;
+}
+.container {
    display: flex;
-   justify-content:space-between;
+   margin: auto;
    flex-direction: column;
    align-items: center;
    font-family: Arial;
    
-  
-   
+   width: 420px;
+   height: 439px;
+   padding:20px;
+   border-radius: 12px;
+   background: #FFF;
+   box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.child{
+    color: #9A9A9A;
+font-family: Ubuntu;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+.input{
+    width: 304px;
+    height: 34px;
+    border-radius: 4px;
+    border: 1px solid #BFBFBF;
+    background: #F6F6F6;
 }
 
 a {
@@ -16,9 +39,10 @@ a {
     box-shadow: 10px 10px 8px #1f21b37c;
     background-color: #3140c981;
     padding: 10px 15px;
-    margin: 15px;
+    
     text-decoration: none;
     color: black;
+    
     
 }
 
@@ -35,22 +59,47 @@ ul {
     display: flex;
     justify-content: space-around;
     list-style: none;
-  
+    border-radius: 12px;
     border-spacing: 0;
     border-collapse: collapse;
     box-shadow: 10px 10px 8px #1f21b37c;
-
-    border-bottom: 4px solid #608ab1;
+    background: #eeebebf5;
+    border-bottom: 3px solid #608ab1;
   
 }
 li {
     padding: 15px 20px;
-
+    
     text-transform: uppercase;
     font-size: 10pt;
     font-family: Arial;
     
    
+}
+
+.bt{
+    width: 167px;
+    height: 46px;
+    display: flex;
+    border: none;
+    border-radius: 4px;
+    background: #007BED;
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    
+
+    color: #FFF;
+    text-align: center;
+    font-family: Ubuntu;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.bt:active{
+    background: #007BED;
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+    
 }
 
 ul li {}
