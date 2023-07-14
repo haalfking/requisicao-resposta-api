@@ -6,27 +6,45 @@
     <title>interação com APIs | update com PUT</title>
 </head>
 <body>
+
     <header>
         <a href="./">Home</a>
-        <h1>update com PUT</h1>
+        <h1 class="titulo-pagina">update com PUT</h1>
     </header>
 
-      <form class="container" action="" method="post">
+    <div class="formulario">
 
-        <label class="child" for="id">ID:</label>
-        <input class="input" type="text" id="id" ><br>
+      <h3 class="titulo-formulario">Alteração de Produtos</h3>
 
-        <label class="child" for="descricao">Descrição:</label>
-        <input class="input" type="text" id="descricao"><br>
+      <form class="formulario-update" action="" method="post">
+    
+        <div class="entrada-formulario">
+         <label for="id">ID:</label>
+         <input type="text" id="id" placeholder="digite o ID do produto" >
+        </div>
 
-        <label class="child" for="preco">Preço:</label>
-        <input class="input" type="text" id="preco"><br>
+        <div class="">
+         <label for="descricao">Descrição:</label>
+         <input type="text" id="descricao" placeholder="digite a descrição do produto">
+        </div>
 
-        <button class="bt" type="button" id="btAtualizar">Atualizar</button>
+        <div class="">
+         <label class="child" for="preco">Preço:</label>
+         <input class="input" type="text" id="preco" placeholder="digite a descrição do produto">
+        </div>
+
+        <div class="botoes-formulario">
+         <button class="bt bt-confirmar" type="button" id="btAtualizar">Atualizar</button>
+         <button class="bt bt-cancelar" type="button" id="btcancelar">Cancelar</button>
+        </div>
 
       </form>
 
-      <div id="listaProdutos"></div>
+    </div>
+
+      <div id="listaProdutos">
+        <h2 class="titulo-lista">Lista de Produtos</h2>
+      </div>
 
     <script>
        

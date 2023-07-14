@@ -11,20 +11,35 @@
         <h1>create com POST</h1>
     </header>
 
-      <form class="container" action="" method="post">
+    <div class="formulario">
 
-        <label class="child" for="id">id:</label>
-        <input class="input" type="text" id="id" disabled><br>
-
-        <label class="child" for="descricao">descrição:</label>
-        <input class="input" type="text" id="descricao"><br>
-
-        <label class="child" for="preco">preço:</label>
-        <input class="input" type="text" id="preco"><br>
-
-        <button class="bt" type="button" id="btCadastrar">cadastrar</button>
-
-      </form>
+        <h3 class="titulo-formulario">Cadastro de Produtos</h3>
+  
+        <form class="formulario-update" action="" method="post">
+      
+          <div class="entrada-formulario">
+           <label for="id">ID:</label>
+           <input type="text" id="id" disabled>
+          </div>
+  
+          <div class="">
+           <label for="descricao">Descrição:</label>
+           <input type="text" id="descricao" placeholder="digite a descrição do produto">
+          </div>
+  
+          <div class="">
+           <label class="child" for="preco">Preço:</label>
+           <input class="input" type="text" id="preco" placeholder="digite a descrição do produto">
+          </div>
+  
+          <div class="botoes-formulario">
+           <button class="bt bt-confirmar" type="button" id="btCadastrar">Cadastrar</button>
+           <button class="bt bt-cancelar" type="button" id="btcancelar">Cancelar</button>
+          </div>
+  
+        </form>
+  
+      </div>
 
       <div id="listaProdutos"></div>
 
