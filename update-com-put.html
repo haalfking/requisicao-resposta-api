@@ -47,6 +47,20 @@
       </div>
 
     <script>
+
+       document.querySelector('#listaProdutos').addEventListener('click', event => {
+          
+          if (event.target.closest('ul').classList.contains('produto')) {
+            
+              const elementoBase = event.target.closest('ul');
+
+              document.querySelector('input#id').value = elementoBase.querySelector('[data-produto="id"]').innerHTML;
+
+              document.querySelector('input#descricao').value = elementoBase.querySelector('[data-produto="descricao"]').innerHTML;
+
+              document.querySelector('input#preco').value = elementoBase.querySelector('[data-produto="preco"]').innerHTML;
+          }
+       });
        
        document.querySelector('#btAtualizar').addEventListener('click',()=>{
 
@@ -90,17 +104,23 @@
             const ul = document.createElement('ul');
             ul.classList.add('produto');
 
-            ul
-            .appendChild(document.createElement('li'))
-              .innerHTML = resposta[i].id;
+            if(resposta[i].atualizado) {
+              ul.style.color = 'blue';
+            }
 
-            ul
-              .appendChild(document.createElement('li'))
-              .innerHTML = resposta[i].descricao;
+            const liId = document.createElement('li');
+            liId.setAttribute('data-produto','id');
+            liId.innerHTML = resposta[i].id;
 
-            ul
-              .appendChild(document.createElement('li'))
-              .innerHTML = resposta[i].preco;
+            const liDescricao = document.createElement('li');
+            liDescricao.setAttribute('data-produto','descricao');
+            liDescricao.innerHTML = resposta[i].descricao;
+
+            const liPreco = document.createElement('li');
+            liPreco.setAttribute('data-produto','preco');
+            lipreco.innerHTML = resposta[i].preco;
+
+            ul.append(liId, liDescricao, liPreco);
 
               document.querySelector('#listaProdutos').appendChild(ul);
 
