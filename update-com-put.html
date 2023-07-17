@@ -16,21 +16,21 @@
 
       <h3 class="titulo-formulario">Alteração de Produtos</h3>
 
-      <form class="formulario-update" action="" method="post">
+      <form class="formulario-update" action="" method="">
     
         <div class="entrada-formulario">
          <label for="id">ID:</label>
          <input type="text" id="id" placeholder="digite o ID do produto" >
         </div>
 
-        <div class="">
+        <div class="entrada-formulario">
          <label for="descricao">Descrição:</label>
          <input type="text" id="descricao" placeholder="digite a descrição do produto">
         </div>
 
-        <div class="">
-         <label class="child" for="preco">Preço:</label>
-         <input class="input" type="text" id="preco" placeholder="digite a descrição do produto">
+        <div class="entrada-formulario">
+         <label for="preco">Preço:</label>
+         <input type="text" id="preco" placeholder="digite a descrição do produto">
         </div>
 
         <div class="botoes-formulario">
@@ -61,13 +61,16 @@
               document.querySelector('input#preco').value = elementoBase.querySelector('[data-produto="preco"]').innerHTML;
           }
        });
+
+       if(idPreenchido === true)
        
        document.querySelector('#btAtualizar').addEventListener('click',()=>{
 
         const dados = {
             'id': null,
             'descricao': document.querySelector('#descricao').value,
-            'preco': document.querySelector('#preco').value
+            'preco': document.querySelector('#preco').value,
+            'atualizado': true
         }
 
         const id = document.querySelector('#id').value;
@@ -83,14 +86,14 @@
         .then(resposta => {
             if(resposta.ok) {
                 alert('produto atualizado');
-                Location.reload();
+                location.reload();
             }
         });
 
        });
-
+            //busca os produtos 
             fetch('http://localhost:3000/produtos',{
-            method: 'get',
+            method: 'GET',
             headers: {
                 'content-type':'application/json'
             }
@@ -99,7 +102,7 @@
               .then(resposta => {
         
 
-        for(let i=0; i< resposta.length; i++){
+        for(let i = 0; i< resposta.length; i++){
 
             const ul = document.createElement('ul');
             ul.classList.add('produto');
@@ -111,6 +114,7 @@
             const liId = document.createElement('li');
             liId.setAttribute('data-produto','id');
             liId.innerHTML = resposta[i].id;
+            liId.classList.add('produto-id');
 
             const liDescricao = document.createElement('li');
             liDescricao.setAttribute('data-produto','descricao');
@@ -118,7 +122,7 @@
 
             const liPreco = document.createElement('li');
             liPreco.setAttribute('data-produto','preco');
-            lipreco.innerHTML = resposta[i].preco;
+            liPreco.innerHTML = resposta[i].preco;
 
             ul.append(liId, liDescricao, liPreco);
 

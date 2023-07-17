@@ -1,25 +1,216 @@
+
+
+:root {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 16pt;
+    --background-color: #FEFFE4;
+}
+
 body {
-    width: 1440px;
-    height: 1024px;
-    background: #FEFFE4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--background-color);
 }
 
-.formulario{
-    width: 420px;
-    height: 439px;
-    flex-shrink: 0;
-    border-radius: 12px;
-    background: #FFF;
+.titulo-pagina {
+    margin: 2.8rem auto;
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+/* FORMULÁRIO */
+
+.formulario {
+    background-color: #fff;
+    padding: 1.4rem 3.7rem;
+    border-radius: 0.75rem;
     box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    margin: 0 auto 3rem;
 }
 
-.entrada-formulario{
-    width: 304px;
-    height: 34px;
-    flex-shrink: 0;
-    border-radius: 4px;
+.formulario-update input[type="text"] {
+    border-radius: 0.25rem;
     border: 1px solid #000;
-    background: #FEFFE4;
+    background-color: var(--background-color);
     box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.25) inset;
-    
+    width: 19rem;
+    height: 2.1rem;
+    padding: 0 .5rem;
+    font-size: 1rem;
+    font-family: 'Ubuntu', sans-serif;
+    line-height: 1;
+}
+
+.formulario-update input[type="text"]::placeholder {
+    font-style: italic;
+    font-size: 1rem;
+    color: #9A9A9A;
+}
+
+.titulo-formulario {
+    font-size: 1.5rem;
+    margin-bottom: 1.8rem;
+    font-weight: 400;
+    text-align: center;
+}
+
+.entrada-formulario {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.9rem;
+}
+
+.formulario-update label {
+    font-size: 1rem;
+    padding-left: .5rem;
+    margin-bottom: .25rem;
+}
+
+.botoes-formulario {
+    margin: 3.7rem auto 1.9rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bt-confirmar {
+    width: 10.4rem;
+    height: 2.9rem;
+    border-radius: 0.25rem;
+    background: #48A4FA;
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    color: #FFF;
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    border: none;
+}
+
+.bt-confirmar:disabled {
+    background: #CAE6FF;
+}
+
+.bt-confirmar:enabled:hover,
+.bt-confirmar:enabled:active {
+    background: #007BED;
+}
+
+.bt-cancelar {
+    width: 7.4rem;
+    height: 2.9rem;
+    border-radius: 0.25rem;
+    background: #F59999;
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    color: #444;
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    border: none;
+}
+
+.bt-cancelar:disabled {
+    background: #FFE2E2;
+}
+
+.bt:enabled {
+    cursor: pointer;
+}
+
+.bt:disabled {
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+.bt-cancelar:enabled:hover,
+.bt-cancelar:enabled:active {
+    background: #FF5F5F;
+}
+
+.bt-confirmar:enabled:active,
+.bt-cancelar:enabled:active {
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+}
+
+/* PRODUTOS */
+
+#listaProdutos {
+    width: 100%;
+    padding: 0 3.4rem;
+    margin-bottom: 5.7rem;
+}
+
+.titulo-lista {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+.produto {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    border-bottom: 1px solid #000;
+    line-height: 2.6875rem;
+    margin-bottom: .25rem;
+}
+
+.produto:nth-child(even) {
+    background: #fff;
+}
+
+.produto:nth-child(odd) {
+    background: #fff1c1;
+}
+
+.produto li:nth-child(1) {
+    text-align: start;
+    margin-left: 2.4rem;
+    width: 10rem;
+}
+
+.produto li:nth-child(2) {
+    text-align: start;
+    width: 70%;
+}
+
+.produto li:nth-child(3) {
+    text-align: end;
+    width: 10rem;
+    margin-right: 2.4rem;
+}
+
+.delete-button {
+    color: red;
+}
+
+/* NAVBAR */
+
+.navbar {
+    background-color: beige;
+}
+
+.navbar ul {
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar li {
+    list-style: none;
+    text-align: center;
+}
+
+.navbar a {
+    color: #000;
+    text-decoration: none;
 }
