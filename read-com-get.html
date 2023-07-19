@@ -12,40 +12,10 @@
     </header>
       <div id="listaProdutos"></div>
 
-    <script>
-       
-
-            fetch('http://localhost:3000/produtos',{
-            method: 'GET',
-            headers: {
-                'content-type':'application/json'
-            }
-        })
-              .then(resposta => resposta.json())
-              .then(resposta => {
-        
-
-        for(let i=0; i< resposta.length; i++){
-
-            const ul = document.createElement('ul');
-
-            ul
-              .appendChild(document.createElement('li'))
-              .innerHTML = resposta[i].id;
-
-            ul
-              .appendChild(document.createElement('li'))
-              .innerHTML = resposta[i].descricao;
-
-            ul
-              .appendChild(document.createElement('li'))
-              .innerHTML = resposta[i].preco;
-
-              document.querySelector('#listaProdutos').appendChild(ul);
-
-        }
-    });            
-    </script>
+     <script type="module">
+      import { buscaProdutos } from './assets/scripts/read-com-get.js';
+      buscaProdutos();
+     </script>
 
     <script src="./assets/scripts/estilo.js"></script>
   </body>

@@ -3,12 +3,14 @@
     {
       "id": 1,
       "descricao": "Sapato social Manhattan",
-      "preco": 199.9
+      "preco": "199.9",
+      "atualizado": true
     },
     {
       "id": 2,
       "descricao": "Sapato casual Brooklyn",
-      "preco": 159.9
+      "preco": "159.90",
+      "atualizado": true
     },
     {
       "id": 3,
@@ -24,6 +26,11 @@
       "id": 5,
       "descricao": "Alpargatas Staten Island",
       "preco": 99.9
+    },
+    {
+      "id": 6,
+      "descricao": "sapato social couro ",
+      "preco": "155,99"
     }
   ],
   "usuarios": [
